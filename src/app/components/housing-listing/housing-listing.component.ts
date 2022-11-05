@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 import { HousingLocation } from 'src/app/@types/housing-location';
 
 @Component({
@@ -15,7 +16,8 @@ import { HousingLocation } from 'src/app/@types/housing-location';
         <img
           class="rounded"
           [src]="location.photo"
-          alt="Picture of {{ location.name }} "
+          alt="Picture of {{ location.name }}"
+          loading="lazy"
         />
         <p class="font-semibold hover:underline">
           {{ location.name }}
